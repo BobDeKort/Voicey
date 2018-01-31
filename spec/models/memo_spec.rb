@@ -12,7 +12,7 @@ RSpec.describe Memo, type: :model do
 
     it "is invalid without a title" do
       bad_memo = Memo.new(title: nil, date: Date.new, text_body: "Testing", user: subject)
-      expect(bad_memo).to_not be_valid
+      expect(bad_memo).to_not(be_valid)
     end
 
     it "is invalid without a date" do
